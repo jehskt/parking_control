@@ -1,0 +1,93 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECECEC; /* Fundo suave */
+    color: #333;
+}
+
+/* Cabeçalho */
+h1 {
+    background-color: #002F4E; /* Azul-escuro do logo */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 img {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Links no topo */
+a {
+    color: #002F4E;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+a:hover {
+    color: #84BD00; /* Verde para destaque */
+}
+
+/* Botões */
+button, a.button {
+    background-color: #002F4E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, a.button:hover {
+    background-color: #004C70; /* Azul mais claro no hover */
+    transform: scale(1.05); /* Pequeno efeito de zoom */
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #DDD;
+    text-align: center;
+}
+/* Efeito ao passar o mouse sobre as linhas da tabela */
+tr:hover {
+    background-color: #E0E0E0;
+}
+
+
+th {
+    background-color: #002F4E; /* Azul-escuro */
+    color: #FFFFFF;
+}
+
+td {
+    background-color: #F9F9F9; /* Fundo alternado */
+}
+
+td:nth-child(odd) {
+    background-color: #ECECEC; /* Alternar cores */
+}
+
+/* Footer (opcional) */
+footer {
+    background-color: #002F4E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
