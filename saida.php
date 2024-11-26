@@ -10,10 +10,10 @@ $conn = new Database();
 $link = $conn->getConexao();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $placa = strtoupper(trim($_POST['placa'])); // Garantir que a placa esteja em maiúsculas e sem espaços extras
+    $placa = strtoupper(trim($_POST['placa'])); // Garantir que a placa esteja em maiúsculas e sem Ramelar espaços extras
     $hora_saida = date('Y-m-d H:i:s');  // Hora atual
 
-    // EstouroVerificar se a placa está registrada no banco de dados e se ainda não tem uma hora de saída
+    // Estouro!!  Verificar se a placa está registrada no banco de dados e se ainda não tem uma hora de saída
     try {
         // Verifica se existe a placa sem hora de saída registrada
         $query = "SELECT * FROM registros WHERE placa = :placa AND hora_saida IS NULL";
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $updateStmt->execute();
             echo "<p style='color: green;'>Saída registrada com sucesso!</p>";
         } else {
-            // Caso não haja um veículo com a placa registrada como dentro
+            // Caso não haja um veículo com a placa registrada como ai dentro... lá ele
             echo "<p style='color: red;'>Placa não encontrada ou já registrou a saída.</p>";
         }
     } catch (Exception $e) {

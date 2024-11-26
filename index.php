@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (preg_match('/^[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}$/', $placa) || 
         preg_match('/^[A-Z]{3}[0-9]{4}$/', $placa)) {
         
-        // Inserir no banco de dados
+        // Inserir no banco de dados chamaa!!
         $sql = "INSERT INTO registros (placa, entrada) VALUES (:placa, NOW())";
         $stmt = $link->prepare("INSERT INTO registros (placa, hora_entrada) VALUES (:placa, NOW())");
         $stmt->bindParam(':placa', $placa);
