@@ -29,7 +29,7 @@ try {
 
 <body>
     <h1>
-        <img src="./class/img/logo_aluco-removebg-preview.png" alt="Logo AlucoMaxx">
+        <img src="./class/img/alucomaxx_logo_tagged_white_1.png" alt="Logo AlucoMaxx">
         Registros de Entrada e Saída
     </h1>
     <div class="nav-links">

@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <h1>
-    <img src="./class/img/logo_aluco-removebg-preview.png" alt="Logo AlucoMaxx">
+    <img src="./class/img/alucomaxx_logo_tagged_white_1.png" alt="Logo AlucoMaxx">
         Registrar Saída de Veículo
     </h1>
     <div class="nav-links">
