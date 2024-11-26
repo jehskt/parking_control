@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Cabeçalho */
+
 h1 {
     background-color: #002F4E; /* Azul-escuro do logo */
     color: #FFFFFF;
@@ -21,7 +21,7 @@ h1 img {
     margin-right: 10px;
 }
 
-/* Links no topo */
+
 a {
     color: #002F4E;
     text-decoration: none;
@@ -64,7 +64,7 @@ th, td {
     border: 1px solid #DDD;
     text-align: center;
 }
-/* Efeito ao passar o mouse sobre as linhas da tabela */
+
 tr:hover {
     background-color: #E0E0E0;
 }
@@ -83,7 +83,7 @@ td:nth-child(odd) {
     background-color: #ECECEC; /* Alternar cores */
 }
 
-/* Footer (opcional) */
+
 footer {
     background-color: #002F4E;
     color: #FFFFFF;
