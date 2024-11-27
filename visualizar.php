@@ -64,6 +64,10 @@ try {
                         <td><?php echo date('d/m/Y H:i:s', strtotime($registro['hora_entrada'])); ?></td>
                         <td><?php echo $registro['hora_saida'] ? date('d/m/Y H:i:s', strtotime($registro['hora_saida'])) : 'Ainda dentro'; ?></td>
                         <td><?php echo date('d/m/Y H:i:s', strtotime($registro['criado_em'])); ?></td>
+                        <td>
+                            <a href="editar.php?id=<?php echo $registro['id']; ?>">Editar</a>
+                        </td>
+
                     </tr>
                 <?php endforeach; ?>
             <?php endif; ?>
