@@ -12,15 +12,19 @@ $link = $conn->getConexao();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Receber a placa do formulário
     $placa = strtoupper(trim($_POST['placa']));
+    $nome = trim($_POST['nome']);
+    $empresa = trim($_POST['empresa']);
 
     // Validar o formato da placa (Mercosul ou antiga) estouro 
     if (preg_match('/^[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}$/', $placa) || 
         preg_match('/^[A-Z]{3}[0-9]{4}$/', $placa)) {
         
         // Inserir no banco de dados chamaa!!
-        $sql = "INSERT INTO registros (placa, entrada) VALUES (:placa, NOW())";
-        $stmt = $link->prepare("INSERT INTO registros (placa, hora_entrada) VALUES (:placa, NOW())");
+        $sql = "INSERT INTO registros (placa,nome,empresa, entrada) VALUES (:placa, :nome, :empresa NOW())";
+        $stmt = $link->prepare("INSERT INTO registros (placa,nome,empresa, hora_entrada) VALUES (:placa, :nome, :empresa, NOW())");
         $stmt->bindParam(':placa', $placa);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':empresa', $empresa);
 
         if ($stmt->execute()) {
             echo "<p style='color: green;'>Entrada registrada com sucesso!</p>";
@@ -56,10 +60,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <hr>
     <form method="POST">
-        <label for="placa">Placa do Veículo:</label>
-        <input type="text" id="placa" name="placa" maxlength="7" required>
-        <button type="submit">Registrar</button>
-    </form>
+    <label for="placa">Placa do Veículo:</label>
+    <input type="text" id="placa" name="placa" maxlength="7" required>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" maxlength="100" required>
+
+    <label for="empresa">Empresa:</label>
+    <input type="text" id="empresa" name="empresa" maxlength="100" required>
+
+    <button type="submit">Registrar Entrada</button>
+</form>
+
     <footer>
     <p>&copy; 2024 AlucoMaxx. Todos os direitos reservados.</p>
 </footer>

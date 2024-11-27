@@ -42,6 +42,8 @@ try {
             <tr>
                 <th>ID</th>
                 <th>Placa</th>
+                <th>Nome</th>
+                <th>Empresa</th>
                 <th>Hora de Entrada</th>
                 <th>Hora de Saída</th>
                 <th>Criado em</th>
@@ -57,6 +59,8 @@ try {
                     <tr>
                         <td><?php echo $registro['id']; ?></td>
                         <td><?php echo $registro['placa']; ?></td>
+                        <td><?php echo $registro['nome']; ?></td>
+                        <td><?php echo $registro['empresa']; ?></td>
                         <td><?php echo date('d/m/Y H:i:s', strtotime($registro['hora_entrada'])); ?></td>
                         <td><?php echo $registro['hora_saida'] ? date('d/m/Y H:i:s', strtotime($registro['hora_saida'])) : 'Ainda dentro'; ?></td>
                         <td><?php echo date('d/m/Y H:i:s', strtotime($registro['criado_em'])); ?></td>
